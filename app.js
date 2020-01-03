@@ -1,28 +1,25 @@
+const path = require('path');
+//util
+const rootDir = require('./util/path');
+//Third Party libs
 const express = require('express');
 const bodyParser = require('body-parser');
+//routes
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
+
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:false}));
 
-//app.use('/',()=>{console.log("this always run");next();});
+app.use('/admin',adminRoutes);
+app.use('/',shopRoutes);
 
-app.use('/add-product',(req, res, next)=>{
-    console.log("in another middlewear");
-    let form = `
-    <form action="/product" method="POST">
-    <input type="text" name="title">
-    <button type="submit">Add Product</button>
-    </form>
-    `
-    res.send(form)
-});
-app.post('/product',(req, res, next)=>{
-    console.log(req.body);
-    res.redirect("/");
-});
-app.use('/',(req, res, next)=>{
-    console.log("in another middlewear"); 
-    res.send(`<h1>Hello from another world</h1><a href="/add-product">Add Production</a>`)
-});
+app.use((req,res,next)=>
+res.status(404).sendFile(path.join(rootDir, 'views','404.html'))
+)
+
+
 app.listen(6001);
