@@ -40,7 +40,7 @@ header nav ul li:hover {
 }
 
 header nav ul li a {
-    color: orange;
+    color: rgb(0, 140, 255);
     font-weight: 100;
     letter-spacing: .5px;
     text-decoration: none;

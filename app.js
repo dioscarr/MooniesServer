@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+const errorController = require('./controllers/error');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -13,9 +14,5 @@ app.use(express.static(path.join(rootDir, 'public')));
 
 app.use('/admin', adminData.routes);
 app.use('/', shopRoutes);
-app.use((req, res, next) => {
-    res.status(404).render('404', { PageTitle: '404er', message: 'Page Not Found1' });
-});
-
-
+app.use(errorController.get404);
 app.listen(6001);
