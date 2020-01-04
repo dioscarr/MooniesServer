@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') %>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/header.css" rel="stylesheet">
+<link href="../css/product.css" rel="stylesheet">
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main class="main-grid">
+        <% if (prods.length > 0){ %>
+        <% for(let prod of prods){  %>
+        <div class="card-group card-grid">
+            <div class="card">
+                <img class="card-img-top" height="150"
+                    src="https://thumbs-prod.si-cdn.com/R9uE2Av71DW6FSFyMCKoTr6SbIg=/720x420/https://public-media.si-cdn.com/filer/91/91/91910c23-cae4-46f8-b7c9-e2b22b8c1710/lostbook.jpg" />
+                <div class="card-body">
+                    <div class="card-title"> <%= prod.title %></div>
+                    <p class="card-text"> <%= prod.description %></p>
+                    <p> price: <%= prod.price %></p>
+                    <button class="btn btn-primary"> Add Cart</button>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <% }else{ %>
+        <h1> No products</h1>
+        <% } %>
+    </main>
+    <%- include('includes/end.ejs') %>
