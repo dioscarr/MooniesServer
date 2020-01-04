@@ -3,6 +3,16 @@
     box-sizing: none;
 }
 
+.active a{
+    color:#cd3606 !important;
+    font-weight:600;
+}
+
+.active a:hover{
+    color:#cd3606 !important;
+    font-weight:600;
+    background-color: cadetblue;
+}
 header {
     width: 100%;
     background-color: rgb(202, 202, 202);

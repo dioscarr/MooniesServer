@@ -24,13 +24,13 @@ input[type="text"]:focus{
 }
 .main-grid{
     display: grid;
-    grid-gap:20px;
-
-    grid-template-columns: auto 390px auto;
-
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
 }
 .card-grid{
-    grid-column:2;
+    
     background-color:white;
     -webkit-box-shadow: 5px 5px 10px -2px #c7c7c7;
     box-shadow: 5px 5px 10px -2px #c7c7c7;
