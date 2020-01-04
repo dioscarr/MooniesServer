@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing: none;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(202, 202, 202);
+}
+
+header nav {
+    width: 100%;
+
+}
+
+header nav ul {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0px;
+
+}
+
+header nav ul li {
+    background-color: rgb(255, 255, 255);
+    float: left;
+
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+    border-radius: 1px;
+    border: 1px solid #cacaca;
+}
+
+header nav ul li:hover {
+    background-color: rgb(87, 154, 255);
+    color: white;
+
+}
+
+header nav ul li a {
+    color: orange;
+    font-weight: 100;
+    letter-spacing: .5px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #856e5a;
+    font-weight: 100;
+    letter-spacing: .5px;
+    text-decoration: none;
+}
+
+

@@ -1,0 +1,36 @@
+
+extends layouts/main-layout.pug
+
+block title
+    title #{PageTitle}
+block styles
+    link(rel="stylesheet", href="../css/product.css")
+block content
+        main.main-grid
+            if prods.length > 0
+                each prod in prods
+                    .card-group.card-grid
+                        .card
+                            img.card-img-top(height="150", src="https://thumbs-prod.si-cdn.com/R9uE2Av71DW6FSFyMCKoTr6SbIg=/720x420/https://public-media.si-cdn.com/filer/91/91/91910c23-cae4-46f8-b7c9-e2b22b8c1710/lostbook.jpg")
+                            .card-body
+                                .card-title #{prod.title}
+                                p.card-text #{prod.description}
+                                p price: #{prod.price}
+                                button.btn.btn-primary Add Cart
+
+
+
+
+
+                //- .grid
+                //-     each prod in prods
+                //-         article
+                //-             header
+                //-                 h1 #{prod.title}
+                //-             div
+                //-                 img(height="150", src="https://thumbs-prod.si-cdn.com/R9uE2Av71DW6FSFyMCKoTr6SbIg=/720x420/https://public-media.si-cdn.com/filer/91/91/91910c23-cae4-46f8-b7c9-e2b22b8c1710/lostbook.jpg")
+                //-             p #{prod.description}
+                //-             p price: #{prod.price}
+                //-             button buy
+            else
+                h1 No products
