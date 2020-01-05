@@ -49,7 +49,9 @@ const getCart = (req, res, next) => {
 }
 const postCart = (req, res, next) => {
     console.log('postCart');
+
     const { productId } = req.body;
+
     Product.findById(productId, prod => {
         Cart.addProduct(prod.id, prod.price)
     });

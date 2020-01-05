@@ -30,21 +30,24 @@ class Cart {
 
         });
     }
-    static removeById = (prodId) => {
+    static removeProdById = (prodId, productPrice) => {
         fs.readFile(cartJsonPath, (err, fileContent) => {
             if (!err) {
-                let updatedCart = JSON.parse(fileContent).filter(item => item.id !== prodId);
-                console.log('total: ' + updatedCart.tototalPrice);
-                let removedTotal = Product.find(itm => item).price * JSON.parse(fileContent).filter(item => item.id === prodId).qty;
-                console.log('removedTotal: ' + removedTotal);
-                updatedCart.tototalPrice = updatedCart.tototalPrice - removedTotal;
-                console.log(' updatedCart.tototalPrice: ' + updatedCart.tototalPrice);
+
+                const updatedCart = { ...cart };
+
+                const product = updatedCart.products.find(prod => prod.id == id);
+                const prodQty = product.qty;
+                updatedCart.products = products.filter(item => item.id !== id);
+                updatedCart.tototalPrice = cart.productPrice - productPrice * prodQty;
+
                 fs.writeFile(cartJsonPath, JSON.stringify(updatedCart), (err) => {
                     console.log(err);
                 });
             }
         });
     }
+
 }
 
 exports.Cart = Cart;

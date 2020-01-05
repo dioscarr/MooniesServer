@@ -1,1 +1,23 @@
-[{"id":"46541","title":"The Book Number 145121","description":"#1 New York Times Bestseller\r\nMore than 4 million copies sold\r\nA Reese Witherspoon x Hello Sunshine Book Club Pick\r\n\r\n\"I can't even express how much I love this book! I didn't want this story to end!\"--Reese Witherspoon\r\n\r\n\"Painfully beautiful.\"--The New York Times Book Review","imgurl":"https://images-na.ssl-images-amazon.com/images/I/51j5p18mJNL.jpg","price":"5"}]
+[
+    {
+        "id": "46541",
+        "title": "The Book Number 145121",
+        "description": "#1 New York Times Bestseller\r\nMore than 4 million copies sold\r\nA Reese Witherspoon x Hello Sunshine Book Club Pick\r\n\r\n\"I can't even express how much I love this book! I didn't want this story to end!\"--Reese Witherspoon\r\n\r\n\"Painfully beautiful.\"--The New York Times Book Review",
+        "imgurl": "https://images-na.ssl-images-amazon.com/images/I/51j5p18mJNL.jpg",
+        "price": "5"
+    },
+    {
+        "id": "85571",
+        "title": "Before We Were Yours: A Novel 4651",
+        "description": "Twelve-year-old Rill Foss and her four younger siblings live a magical life aboard their family’s Mississippi River shantyboat. But when their father must rush their mother to the hospital one stormy night, Rill is left in charge—until strangers arrive in force. Wrenched from all that is familiar and thrown into a Tennessee Children’s Home Society orphanage, the Foss children are assured that they will soon be returned to their parents—but they quickly realize the dark truth. At the mercy of the facility’s cruel director, Rill fights to keep her sisters and brother together in a world of danger and uncertainty.",
+        "imgurl": "https://images-na.ssl-images-amazon.com/images/I/81Css5CRj5L.jpg",
+        "price": "13.08"
+    },
+    {
+        "id": "26521",
+        "title": "The Guestbook 12",
+        "description": "Everyone remembers their first love, but sometimes it’s the second love that lasts… \"Evocative and heartfelt, The Guestbook is the profound story of one woman's journey toward hope, renewal and a second chance at love on a lush Pacific Northwest island. Curl up with your favorite cup of cocoa and enjoy.\" ~Anjali Banerjee - author of Imaginary Men and Haunting Jasmine The Guestbook: weaves together the heart of Nicholas Sparks’ books, the romance of Nora Robert’s work, and the...",
+        "imgurl": "https://images-na.ssl-images-amazon.com/images/I/51NnIc4cxzL.jpg",
+        "price": "14.19"
+    }
+]
