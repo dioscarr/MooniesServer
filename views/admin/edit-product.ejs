@@ -1,0 +1,26 @@
+<%- include('../includes/head.ejs') %>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/header.css" rel="stylesheet">
+<link href="/css/product.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main class="add-product">
+        <form action="/admin/<%= (!editMode)? 'add':'edit' %>-product" method="POST">
+            <input type="hidden" name="prodId" value="<%= (editMode)? prod.id:'' %>" />
+            <label for="title">Book Title</label>
+            <input type="text" id="title" class="form-control" name="title" value="<%= (editMode)?prod.title:'' %>">
+            <label for="imgurl">Image Url</label>
+            <input type="text" id="imgurl" class="form-control" name="imgurl" value="<%= (editMode)?prod.imgurl:'' %>">
+            <label for="price">Price</label>
+            <input type="number" id="price" class="form-control" name="price" step="0.01"
+                value="<%= (editMode)?prod.price:'' %>">
+            <label for="description">Description</label>
+            <textarea type="text" id="description" rows="15" class="form-control"
+                name="description"><%= (editMode)?prod.description:'' %></textarea>
+            <button type="submit" class="btn btn-primary"><%= (!editMode)? 'Add':'Update' %>
+                Product</button>
+        </form>
+    </main>
+    <%- include('../includes/end.ejs') %>

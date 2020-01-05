@@ -1,9 +1,36 @@
 <%- include('../includes/head.ejs') %>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/header.css" rel="stylesheet">
-</head>
+<link href="../css/product.css" rel="stylesheet">
 
 <body>
     <%- include('../includes/navigation.ejs') %>
-    <h1>Admin Products</h1>
+    <main class="main-grid">
+        <% if (prods.length > 0){ %>
+        <% for(let prod of prods){  %>
+        <div class="card-group card-grid">
+            <div class="card">
+                <img class="card-img-top" height="150" src="<%= prod.imgurl %>" />
+                <div class="card-body">
+                    <div class="card-title"> <%= prod.title %></div>
+                    <p class="card-text"> <%= prod.description %></p>
+                    <p class="price"> price:$<%= prod.price %></p>
+                    <div class="card_actions">
+                        <a href="/admin/edit-product/<%= prod.id %>?editMode=<%= true %>"
+                            class="btn btn-primary">Edit</a>
+                        <form action="/admin/delete-product/" method="POST">
+                            <input type="hidden" name="prodId" value="<%= prod.id %>" />
+                            <button class="btn btn-primary">Delete</button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <% }else{ %>
+        <h1> No products</h1>
+        <% } %>
+    </main>
     <%- include('../includes/end.ejs') %>
